@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #fdf6ee;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header e navegação ===== */
+
+header {
+    background: linear-gradient(135deg, #d9480f, #b83a0d);
+    color: #fff;
+    text-align: center;
+    padding: 24px 16px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(0,0,0,0.15);
+    padding: 10px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    flex: 0 0 auto;
+}
+
+nav a:hover,
+nav a:active {
+    background-color: #fff;
+    color: #d9480f;
+    transform: translateY(-1px);
+}
+
+/* ===== Layout principal ===== */
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px 100px; /* espaço extra embaixo pro carrinho fixo não cobrir o último item */
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+section h2 {
+    font-size: 1.25rem;
+    color: #d9480f;
+    display: inline-block;
+    border-bottom: 3px solid #d9480f;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+section > p {
+    font-size: 0.88rem;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+article {
+    margin-bottom: 18px;
+}
+
+article h3 {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Cardápio: cards grandes e quadrados ===== */
+
+.cardapio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.item-cardapio {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.item-foto {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff3e0;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-emoji-fallback {
+    display: none; /* só aparece via onerror da <img>, quando a foto real não existe ainda */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2.2rem;
+}
+
+.item-nome {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    min-height: 2.2em;
+}
+
+.item-preco {
+    font-weight: bold;
+    color: #d9480f;
+    font-size: 0.9rem;
+}
+
+.qtd-controle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.qtd-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background-color: #d9480f;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.qtd-btn:active {
+    background-color: #b83a0d;
+}
+
+.qtd-valor {
+    min-width: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* ===== Barra do carrinho ===== */
+
+.carrinho-resumo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #d9480f;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.carrinho-resumo #carrinho-total {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.btn-pix {
+    background-color: #fff;
+    color: #d9480f;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+/* ===== Modal do Pix ===== */
+
+.modal-pix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 20;
+}
+
+.modal-pix.oculto {
+    display: none;
+}
+
+.modal-pix-conteudo {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px 20px;
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.fechar-pix {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.pix-valor {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d9480f;
+    margin-bottom: 14px;
+}
+
+.qrcode-pix {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+#pix-copiacola {
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.btn-copiar-pix {
+    background-color: #d9480f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.copiado-msg {
+    color: #2b8a3e;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.copiado-msg.oculto {
+    display: none;
+}
+
+/* ===== Contato ===== */
+
+.contato-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 14px;
+    text-decoration: none;
+    color: #333;
+}
+
+.contato-icone {
+    font-size: 1.6rem;
+    flex: 0 0 auto;
+}
+
+.contato-texto {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.contato-texto strong {
+    color: #d9480f;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.contato-card.whatsapp {
+    border-left: 4px solid #25D366;
+}
+
+.contato-card.localizacao {
+    border-left: 4px solid #d9480f;
+}
+
+/* ===== Votação ===== */
+
+.voto-msg {
+    background-color: #fff3e0;
+    color: #d9480f;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+}
+
+.voto-msg.oculto {
+    display: none;
+}
+
+.votacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.voto-card {
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 14px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    text-align: center;
+}
+
+.voto-card:active {
+    border-color: #d9480f;
+    background-color: #fff3e0;
+}
+
+.voto-card:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.voto-emoji {
+    font-size: 1.8rem;
+}
+
+.btn-ver-ranking {
+    display: block;
+    width: 100%;
+    background-color: #d9480f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.ranking-secao.oculto {
+    display: none;
+}
+
+.ranking-secao {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.ranking-secao h3 {
+    margin-bottom: 10px;
+    color: #d9480f;
+}
+
+.ranking-lista {
+    list-style: none;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0e6da;
+    font-size: 0.9rem;
+}
+
+.ranking-item:last-child {
+    border-bottom: none;
+}
+
+.ranking-posicao {
+    font-weight: bold;
+    color: #d9480f;
+    min-width: 24px;
+}
+
+.ranking-nome {
+    flex: 1 1 auto;
+}
+
+.ranking-votos {
+    font-weight: bold;
+    color: #777;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio digital — Tiazinha dos Salgados</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>TIAZINHA DOS SALGADOS</h1>
+        <p class="subtitulo">Salgados, bolinhos, café e refrigerantes fresquinhos para você!</p>
+        <nav>
+            <a href="#SalgadosGrandes">Salgados grandes</a>
+            <a href="#SalgadosPequenos">Salgados pequenos</a>
+            <a href="#BolosBebidas">Bolos e bebidas</a>
+            <a href="#Contato">Contato</a>
+            <a href="#Votacao">Votação</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="SalgadosGrandes">
+            <h2>Salgados grandes</h2>
+            <p>Confira nossos salgados deliciosos!</p>
+            <div class="cardapio-grid">
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Bomba de fogo">
+                    <div class="item-foto">
+                        <img src="fotos/bomba-de-fogo.jpg" alt="Bomba de fogo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🌶️</span>
+                    </div>
+                    <span class="item-nome">Bomba de fogo</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Bomba X-tudo">
+                    <div class="item-foto">
+                        <img src="fotos/bomba-x-tudo.jpg" alt="Bomba X-tudo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥪</span>
+                    </div>
+                    <span class="item-nome">Bomba X-tudo</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Coxinha de frango">
+                    <div class="item-foto">
+                        <img src="fotos/coxinha-de-frango.jpg" alt="Coxinha de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🍗</span>
+                    </div>
+                    <span class="item-nome">Coxinha de frango</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Empada">
+                    <div class="item-foto">
+                        <img src="fotos/empada.jpg" alt="Empada" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥧</span>
+                    </div>
+                    <span class="item-nome">Empada</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Tira de carne">
+                    <div class="item-foto">
+                        <img src="fotos/tira-de-carne.jpg" alt="Tira de carne" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥩</span>
+                    </div>
+                    <span class="item-nome">Tira de carne</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Francês de frango">
+                    <div class="item-foto">
+                        <img src="fotos/frances-de-frango.jpg" alt="Francês de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥖</span>
+                    </div>
+                    <span class="item-nome">Francês de frango</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Francês de presunto">
+                    <div class="item-foto">
+                        <img src="fotos/frances-de-presunto.jpg" alt="Francês de presunto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥖</span>
+                    </div>
+                    <span class="item-nome">Francês de presunto</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Hambúrguer">
+                    <div class="item-foto">
+                        <img src="fotos/hamburguer.jpg" alt="Hambúrguer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🍔</span>
+                    </div>
+                    <span class="item-nome">Hambúrguer</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Pastel de forno de frango">
+                    <div class="item-foto">
+                        <img src="fotos/pastel-forno-frango.jpg" alt="Pastel de forno de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥟</span>
+                    </div>
+                    <span class="item-nome">Pastel de forno de frango</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="8.00" data-nome="Pizza calabresa">
+                    <div class="item-foto">
+                        <img src="fotos/pizza-calabresa.jpg" alt="Pizza calabresa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🍕</span>
+                    </div>
+                    <span class="item-nome">Pizza calabresa</span>
+                    <span class="item-preco">R$ 8,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="SalgadosPequenos">
+            <h2>Salgados pequenos</h2>
+            <div class="cardapio-grid">
+
+                <div class="item-cardapio" data-preco="5.00" data-nome="Mini esfirra">
+                    <div class="item-foto">
+                        <img src="fotos/mini-esfirra.jpg" alt="Mini esfirra" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🫓</span>
+                    </div>
+                    <span class="item-nome">Mini esfirra</span>
+                    <span class="item-preco">R$ 5,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="5.00" data-nome="Mini francês de frango">
+                    <div class="item-foto">
+                        <img src="fotos/mini-frances-frango.jpg" alt="Mini francês de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥖</span>
+                    </div>
+                    <span class="item-nome">Mini francês de frango</span>
+                    <span class="item-preco">R$ 5,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="5.00" data-nome="Mini pastel de forno de frango">
+                    <div class="item-foto">
+                        <img src="fotos/mini-pastel-forno-frango.jpg" alt="Mini pastel de forno de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🥟</span>
+                    </div>
+                    <span class="item-nome">Mini pastel de forno de frango</span>
+                    <span class="item-preco">R$ 5,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio" data-preco="5.00" data-nome="Mini pastel de queijo">
+                    <div class="item-foto">
+                        <img src="fotos/mini-pastel-queijo.jpg" alt="Mini pastel de queijo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="item-emoji-fallback">🧀</span>
+                    </div>
+                    <span class="item-nome">Mini pastel de queijo</span>
+                    <span class="item-preco">R$ 5,00</span>
+                    <div class="qtd-controle">
+                        <button class="qtd-btn" data-acao="menos">−</button>
+                        <span class="qtd-valor">0</span>
+                        <button class="qtd-btn" data-acao="mais">+</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="BolosBebidas">
+            <h2>Bolos e bebidas</h2>
+
+            <article>
+                <h3>Bolos</h3>
+                <div class="cardapio-grid">
+                    <div class="item-cardapio" data-preco="5.00" data-nome="Bolo de chocolate">
+                        <div class="item-foto">
+                            <img src="fotos/bolo-chocolate.jpg" alt="Bolo de chocolate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🍫</span>
+                        </div>
+                        <span class="item-nome">Bolo de chocolate</span>
+                        <span class="item-preco">R$ 5,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Bebidas</h3>
+                <div class="cardapio-grid">
+
+                    <div class="item-cardapio" data-preco="5.00" data-nome="Suco">
+                        <div class="item-foto">
+                            <img src="fotos/suco.jpg" alt="Suco" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🧃</span>
+                        </div>
+                        <span class="item-nome">Suco</span>
+                        <span class="item-preco">R$ 5,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="8.00" data-nome="Água mineral">
+                        <div class="item-foto">
+                            <img src="fotos/agua-mineral.jpg" alt="Água mineral" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">💧</span>
+                        </div>
+                        <span class="item-nome">Água mineral</span>
+                        <span class="item-preco">R$ 8,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="5.00" data-nome="Refrigerante 250 ml">
+                        <div class="item-foto">
+                            <img src="fotos/refrigerante-250ml.jpg" alt="Refrigerante 250 ml" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🥤</span>
+                        </div>
+                        <span class="item-nome">Refrigerante 250 ml</span>
+                        <span class="item-preco">R$ 5,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="10.00" data-nome="Refrigerante 1 litro">
+                        <div class="item-foto">
+                            <img src="fotos/refrigerante-1litro.jpg" alt="Refrigerante 1 litro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🥤</span>
+                        </div>
+                        <span class="item-nome">Refrigerante 1 litro</span>
+                        <span class="item-preco">R$ 10,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="6.00" data-nome="Refrigerante em lata">
+                        <div class="item-foto">
+                            <img src="fotos/refrigerante-lata.jpg" alt="Refrigerante em lata" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🥫</span>
+                        </div>
+                        <span class="item-nome">Refrigerante em lata</span>
+                        <span class="item-preco">R$ 6,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="2.00" data-nome="Cremozinho">
+                        <div class="item-foto">
+                            <img src="fotos/cremozinho.jpg" alt="Cremozinho" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🍨</span>
+                        </div>
+                        <span class="item-nome">Cremozinho</span>
+                        <span class="item-preco">R$ 2,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                    <div class="item-cardapio" data-preco="3.00" data-nome="Café com leite">
+                        <div class="item-foto">
+                            <img src="fotos/cafe-com-leite.jpg" alt="Café com leite" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">☕</span>
+                        </div>
+                        <span class="item-nome">Café com leite</span>
+                        <span class="item-preco">R$ 3,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+
+        <section id="Contato">
+            <h2>Contato</h2>
+            <p>Fale com a gente ou venha conferir de pertinho!</p>
+
+            <div class="contato-cards">
+                <a
+                    href="https://wa.me/5586999158038?text=Oi%2C%20vi%20o%20card%C3%A1pio%20e%20queria%20fazer%20um%20pedido!"
+                    target="_blank"
+                    rel="noopener"
+                    class="contato-card whatsapp"
+                >
+                    <span class="contato-icone">💬</span>
+                    <span class="contato-texto">
+                        <strong>Fale no WhatsApp</strong>
+                        <span>(86) 99915-8038</span>
+                    </span>
+                </a>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Av.+J%C3%B3quei+Clube%2C+710%2C+J%C3%B3quei%2C+Teresina+-+PI"
+                    target="_blank"
+                    rel="noopener"
+                    class="contato-card localizacao"
+                >
+                    <span class="contato-icone">📍</span>
+                    <span class="contato-texto">
+                        <strong>Como chegar</strong>
+                        <span>Av. Jóquei Clube, 710 — Jóquei, Teresina - PI</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section id="Votacao">
+            <h2>Vote no seu favorito!</h2>
+            <p>Clique no salgado que você mais gosta e veja o ranking dos favoritos da galera.</p>
+
+            <p id="voto-msg" class="voto-msg oculto"></p>
+
+            <div class="votacao-grid">
+                <button class="voto-card" data-item="Bomba de fogo"><span class="voto-emoji">🌶️</span>Bomba de fogo</button>
+                <button class="voto-card" data-item="Bomba X-tudo"><span class="voto-emoji">🥪</span>Bomba X-tudo</button>
+                <button class="voto-card" data-item="Coxinha de frango"><span class="voto-emoji">🍗</span>Coxinha de frango</button>
+                <button class="voto-card" data-item="Empada"><span class="voto-emoji">🥧</span>Empada</button>
+                <button class="voto-card" data-item="Tira de carne"><span class="voto-emoji">🥩</span>Tira de carne</button>
+                <button class="voto-card" data-item="Francês de frango"><span class="voto-emoji">🥖</span>Francês de frango</button>
+                <button class="voto-card" data-item="Francês de presunto"><span class="voto-emoji">🥖</span>Francês de presunto</button>
+                <button class="voto-card" data-item="Hambúrguer"><span class="voto-emoji">🍔</span>Hambúrguer</button>
+                <button class="voto-card" data-item="Pastel de forno de frango"><span class="voto-emoji">🥟</span>Pastel de forno</button>
+                <button class="voto-card" data-item="Pizza calabresa"><span class="voto-emoji">🍕</span>Pizza calabresa</button>
+                <button class="voto-card" data-item="Mini esfirra"><span class="voto-emoji">🫓</span>Mini esfirra</button>
+                <button class="voto-card" data-item="Mini francês de frango"><span class="voto-emoji">🥖</span>Mini francês</button>
+                <button class="voto-card" data-item="Mini pastel de forno de frango"><span class="voto-emoji">🥟</span>Mini pastel forno</button>
+                <button class="voto-card" data-item="Mini pastel de queijo"><span class="voto-emoji">🧀</span>Mini pastel queijo</button>
+            </div>
+
+            <button id="btn-ver-ranking" class="btn-ver-ranking">Ver ranking atual</button>
+
+            <div id="ranking-secao" class="ranking-secao oculto">
+                <h3>🏆 Ranking dos favoritos</h3>
+                <ol id="ranking-lista" class="ranking-lista"></ol>
+            </div>
+        </section>
+    </main>
+
+    <div id="carrinho-resumo" class="carrinho-resumo">
+        <span id="carrinho-itens">0 itens</span>
+        <span id="carrinho-total">R$ 0,00</span>
+        <button id="btn-pix" class="btn-pix">Pagar com Pix</button>
+    </div>
+
+    <div id="modal-pix" class="modal-pix oculto">
+        <div class="modal-pix-conteudo">
+            <button id="fechar-pix" class="fechar-pix">×</button>
+            <h3>Pagamento via Pix</h3>
+            <p id="pix-valor-exibido" class="pix-valor"></p>
+            <div id="qrcode-pix" class="qrcode-pix"></div>
+            <label for="pix-copiacola">Pix Copia e Cola</label>
+            <textarea id="pix-copiacola" readonly rows="4"></textarea>
+            <button id="btn-copiar-pix" class="btn-copiar-pix">Copiar código</button>
+            <p id="copiado-msg" class="copiado-msg oculto">Código copiado!</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="JS/carrinho.js"></script>
+    <script src="JS/pix.js"></script>
+    <script src="JS/votacao.js"></script>
+</body>
+</html>
