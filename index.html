@@ -10,6 +10,7 @@
     <header>
         <h1>TIAZINHA DOS SALGADOS</h1>
         <p class="subtitulo">Salgados, bolinhos, café e refrigerantes fresquinhos para você!</p>
+        <div id="status-funcionamento" class="status-funcionamento"></div>
         <nav>
             <a href="#SalgadosGrandes">Salgados grandes</a>
             <a href="#SalgadosPequenos">Salgados pequenos</a>
@@ -25,7 +26,7 @@
             <p>Confira nossos salgados deliciosos!</p>
             <div class="cardapio-grid">
 
-                <div class="item-cardapio" data-preco="8.00" data-nome="Bomba de fogo">
+                <div class="item-cardapio" data-preco="8.00" data-nome="Bomba Tradicional">
                     <div class="item-foto">
                         <img src="fotos/bombaTradicional.jpg" alt="Bomba Tradicional" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <span class="item-emoji-fallback">🌶️</span>
@@ -271,6 +272,20 @@
                         </div>
                     </div>
 
+                    <div class="item-cardapio" data-preco="4.00" data-nome="Nescau">
+                        <div class="item-foto">
+                            <img src="fotos/nescau.jpg" alt="Nescau" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="item-emoji-fallback">🥛</span>
+                        </div>
+                        <span class="item-nome">Nescau</span>
+                        <span class="item-preco">R$ 4,00</span>
+                        <div class="qtd-controle">
+                            <button class="qtd-btn" data-acao="menos">−</button>
+                            <span class="qtd-valor">0</span>
+                            <button class="qtd-btn" data-acao="mais">+</button>
+                        </div>
+                    </div>
+
                     <div class="item-cardapio" data-preco="8.00" data-nome="Água mineral">
                         <div class="item-foto">
                             <img src="fotos/agua-mineral.jpeg" alt="Água mineral" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -399,20 +414,20 @@
             <p id="voto-msg" class="voto-msg oculto"></p>
 
             <div class="votacao-grid">
-                <button class="voto-card" data-item="Bomba de fogo"><span class="voto-emoji">🌶️</span>Bomba de fogo</button>
-                <button class="voto-card" data-item="Bomba X-tudo"><span class="voto-emoji">🥪</span>Bomba X-tudo</button>
-                <button class="voto-card" data-item="Coxinha de frango"><span class="voto-emoji">🍗</span>Coxinha de frango</button>
-                <button class="voto-card" data-item="Empada"><span class="voto-emoji">🥧</span>Empada</button>
-                <button class="voto-card" data-item="Tira de carne"><span class="voto-emoji">🥩</span>Tira de carne</button>
-                <button class="voto-card" data-item="Francês de frango"><span class="voto-emoji">🥖</span>Francês de frango</button>
-                <button class="voto-card" data-item="Francês de presunto"><span class="voto-emoji">🥖</span>Francês de presunto</button>
-                <button class="voto-card" data-item="Hambúrguer"><span class="voto-emoji">🍔</span>Hambúrguer</button>
-                <button class="voto-card" data-item="Pastel de forno de frango"><span class="voto-emoji">🥟</span>Pastel de forno</button>
-                <button class="voto-card" data-item="Pizza calabresa"><span class="voto-emoji">🍕</span>Pizza calabresa</button>
-                <button class="voto-card" data-item="Mini esfirra"><span class="voto-emoji">🫓</span>Mini esfirra</button>
-                <button class="voto-card" data-item="Mini francês de frango"><span class="voto-emoji">🥖</span>Mini francês</button>
-                <button class="voto-card" data-item="Mini pastel de forno de frango"><span class="voto-emoji">🥟</span>Mini pastel forno</button>
-                <button class="voto-card" data-item="Mini pastel de queijo"><span class="voto-emoji">🧀</span>Mini pastel queijo</button>
+                <button class="voto-card" data-item="Bomba Tradicional"><div class="voto-foto"><img src="fotos/bombaTradicional.jpg" alt="Bomba Tradicional" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🌶️</span></div>Bomba Tradicional</button>
+                <button class="voto-card" data-item="Bomba X-tudo"><div class="voto-foto"><img src="fotos/bomba-x-tudo.jpg" alt="Bomba X-tudo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥪</span></div>Bomba X-tudo</button>
+                <button class="voto-card" data-item="Coxinha de frango"><div class="voto-foto"><img src="fotos/coxinha-de-frango.jpg" alt="Coxinha de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🍗</span></div>Coxinha de frango</button>
+                <button class="voto-card" data-item="Empada"><div class="voto-foto"><img src="fotos/empada.jpeg" alt="Empada" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥧</span></div>Empada</button>
+                <button class="voto-card" data-item="Tira de carne"><div class="voto-foto"><img src="fotos/tira-de-carne.jpg" alt="Tira de carne" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥩</span></div>Tira de carne</button>
+                <button class="voto-card" data-item="Francês de frango"><div class="voto-foto"><img src="fotos/frances-de-frango.jpg" alt="Francês de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥖</span></div>Francês de frango</button>
+                <button class="voto-card" data-item="Francês de presunto"><div class="voto-foto"><img src="fotos/frances-de-presunto.jpg" alt="Francês de presunto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥖</span></div>Francês de presunto</button>
+                <button class="voto-card" data-item="Hambúrguer"><div class="voto-foto"><img src="fotos/hamburguer.jpg" alt="Hambúrguer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🍔</span></div>Hambúrguer</button>
+                <button class="voto-card" data-item="Pastel de forno de frango"><div class="voto-foto"><img src="fotos/pastel-forno-frango.jpeg" alt="Pastel de forno de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥟</span></div>Pastel de forno</button>
+                <button class="voto-card" data-item="Pizza calabresa"><div class="voto-foto"><img src="fotos/pizza-calabresa.jpeg" alt="Pizza calabresa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🍕</span></div>Pizza calabresa</button>
+                <button class="voto-card" data-item="Mini esfirra"><div class="voto-foto"><img src="fotos/mini-esfirra.jpeg" alt="Mini esfirra" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🫓</span></div>Mini esfirra</button>
+                <button class="voto-card" data-item="Mini francês de frango"><div class="voto-foto"><img src="fotos/mini-frances-frango.jpg" alt="Mini francês de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥖</span></div>Mini francês</button>
+                <button class="voto-card" data-item="Mini pastel de forno de frango"><div class="voto-foto"><img src="fotos/mini-pastel-forno-frango.jpeg" alt="Mini pastel de forno de frango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🥟</span></div>Mini pastel forno</button>
+                <button class="voto-card" data-item="Mini pastel de queijo"><div class="voto-foto"><img src="fotos/mini-pastel-queijo.jpeg" alt="Mini pastel de queijo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="voto-emoji-fallback">🧀</span></div>Mini pastel queijo</button>
             </div>
 
             <button id="btn-ver-ranking" class="btn-ver-ranking">Ver ranking atual</button>
@@ -425,9 +440,14 @@
     </main>
 
     <div id="carrinho-resumo" class="carrinho-resumo">
-        <span id="carrinho-itens">0 itens</span>
-        <span id="carrinho-total">R$ 0,00</span>
-        <button id="btn-pix" class="btn-pix">Pagar com Pix</button>
+        <div class="carrinho-info">
+            <span id="carrinho-itens">0 itens</span>
+            <span id="carrinho-total">R$ 0,00</span>
+        </div>
+        <div class="carrinho-botoes">
+            <button id="btn-pedido-whatsapp" class="btn-pedido-whatsapp">Enviar pedido</button>
+            <button id="btn-pix" class="btn-pix">Pagar com Pix</button>
+        </div>
     </div>
 
     <div id="modal-pix" class="modal-pix oculto">
@@ -445,7 +465,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="JS/carrinho.js"></script>
+    <script src="JS/pedido.js"></script>
     <script src="JS/pix.js"></script>
     <script src="JS/votacao.js"></script>
+    <script src="JS/horario.js"></script>
 </body>
 </html>

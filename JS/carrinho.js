@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.__carrinhoJaIniciado) return; // evita ligar tudo 2x se o script for incluído por engano mais de uma vez
+    if (window.__carrinhoJaIniciado) return;
     window.__carrinhoJaIniciado = true;
 
     const itens = document.querySelectorAll('.item-cardapio');

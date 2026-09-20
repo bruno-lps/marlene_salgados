@@ -1,5 +1,4 @@
-// Dados fixos da vendedora
-const PIX_CHAVE = '+5586999158038'; // chave do tipo telefone precisa do código do país (+55)
+const PIX_CHAVE = '+5586999158038';
 const PIX_NOME = 'MARIA MARLENE ARAUJO NORONHA'.slice(0, 25);
 const PIX_CIDADE = 'TERESINA';
 
@@ -68,7 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
         pixValorExibido.textContent = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         pixCopiaCola.value = payload;
         qrcodeDiv.innerHTML = '';
-        new QRCode(qrcodeDiv, { text: payload, width: 200, height: 200 });
+
+        try {
+            if (typeof QRCode === 'undefined') {
+                throw new Error('Biblioteca de QR Code não carregou');
+            }
+            new QRCode(qrcodeDiv, { text: payload, width: 200, height: 200 });
+        } catch (erro) {
+            qrcodeDiv.innerHTML = '<p class="qrcode-erro">Não foi possível gerar o QR Code agora (verifique sua internet). Use o código abaixo, copiando e colando no app do banco.</p>';
+        }
 
         copiadoMsg.classList.add('oculto');
         modal.classList.remove('oculto');
