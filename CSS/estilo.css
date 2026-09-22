@@ -55,7 +55,7 @@ header h1 {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
     background-color: rgba(0,0,0,0.15);
     padding: 10px 12px;
@@ -64,6 +64,14 @@ nav {
     z-index: 15;
     overflow-x: auto;
     white-space: nowrap;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 640px) {
+    nav {
+        justify-content: center;
+    }
 }
 
 nav a {
