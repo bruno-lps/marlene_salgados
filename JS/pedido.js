@@ -7,36 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
-    function montarMensagemPedido() {
-        const linhas = [];
+    function calcularTotal() {
         let total = 0;
-
         document.querySelectorAll('.item-cardapio').forEach(item => {
             const qtd = parseInt(item.querySelector('.qtd-valor').textContent, 10);
             if (qtd > 0) {
-                const preco = parseFloat(item.dataset.preco);
-                const nome = item.dataset.nome;
-                const subtotal = preco * qtd;
-                total += subtotal;
-                linhas.push(`${qtd}x ${nome} — ${formatarPreco(subtotal)}`);
+                total += parseFloat(item.dataset.preco) * qtd;
             }
         });
+        return total;
+    }
 
-        if (linhas.length === 0) return null;
+    function montarMensagemComprovante() {
+        const total = calcularTotal();
 
-        return 'Olá! Quero fazer o seguinte pedido:\n\n' +
-            linhas.join('\n') +
-            `\n\n*Total: ${formatarPreco(total)}*`;
+        if (total <= 0) {
+            return 'Olá! Já fiz meu pedido com a Tiazinha e vou pagar com Pix. Segue o comprovante:';
+        }
+
+        return `Olá! Já fiz meu pedido com a Tiazinha (Total: ${formatarPreco(total)}) e paguei com Pix. Segue o comprovante:`;
     }
 
     btnPedido.addEventListener('click', () => {
-        const mensagem = montarMensagemPedido();
-
-        if (!mensagem) {
-            alert('Escolha pelo menos um item no cardápio antes de enviar o pedido.');
-            return;
-        }
-
+        const mensagem = montarMensagemComprovante();
         const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     });
